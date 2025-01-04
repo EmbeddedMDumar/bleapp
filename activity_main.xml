@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <!-- Bluetooth Status -->
+    <TextView
+        android:id="@+id/bluetoothStatusTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bluetooth_status_unknown"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="#000000" />
+
+    <!-- Bluetooth Icon -->
+    <ImageView
+        android:id="@+id/bluetoothIv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_bluetooth_off"
+        android:contentDescription="@string/bluetooth_status_icon"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Turn On Button -->
+    <Button
+        android:id="@+id/turnOnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/turn_on_bluetooth"
+        android:layout_marginTop="10dp" />
+
+    <!-- Turn Off Button -->
+    <Button
+        android:id="@+id/turnOffBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn Off Bluetooth"
+        android:layout_marginTop="10dp" />
+
+    <!-- Scan for Devices Button -->
+    <Button
+        android:id="@+id/scanBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan for Devices"
+        android:layout_marginTop="10dp" />
+
+    <!-- Paired Devices List -->
+    <TextView
+        android:id="@+id/pairedTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paired Devices:"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <!-- Placeholder for Empty Device List -->
+    <TextView
+        android:id="@+id/emptyListTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No devices found."
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:textSize="14sp" />
+
+    <!-- List of Devices -->
+    <ListView
+        android:id="@+id/devicesLv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>
